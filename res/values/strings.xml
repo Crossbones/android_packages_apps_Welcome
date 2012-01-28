@@ -16,7 +16,9 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="app_name">Donate to Crossbones</string>
+    <string name="app_name">Welcome</string>
+
+    <string name="welcome_title">Welcome to Crossbones</string>
 
     <string name="donate_title">Donate to Crossbones</string>
     <string name="donate_summary">Support Crossbones by donating through PayPal.\n\mDonations go towards the purchase of new devices, hardware, books, and anythine else related to the development of Crossbones Software.\n\nWe appreciate your support!</string>
