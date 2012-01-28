@@ -34,13 +34,15 @@ public class Welcome extends Activity {
         super.onCreate(icicle);
         SharedPreferences prefs = getPreferences(0);
 
-        if ((prefs.getBoolean(FIRST_BOOT, true)) == true) {
+        if (prefs.getBoolean(FIRST_BOOT, true)) {
             SharedPreferences.Editor prefEditor = prefs.edit();
             prefEditor.putBoolean(FIRST_BOOT, false);
             prefEditor.commit();
 
             //setContentView(R.layout.welcome);
             setContentView(R.layout.donate);
+        } else {
+            finish();
         }
     }
 }
