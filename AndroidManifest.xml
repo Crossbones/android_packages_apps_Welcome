@@ -34,7 +34,8 @@
         </receiver>
 
         <activity android:name=".Welcome" 
-                  android:theme="@android:style/Theme.Holo.NoActionBar"
+                  android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+                  android:screenOrientation="portrait"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

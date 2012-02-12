@@ -41,10 +41,14 @@ public class Donate extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == mDonateButton) {
-            Intent browse = new Intent();
-            browse.setAction(Intent.ACTION_VIEW);
-            browse.setData(Uri.parse(getString(R.string.donate_url)));
-            startActivity(browse);
+            launchDonate();
         }
+    }
+
+    public void launchDonate() {
+        Intent browse = new Intent();
+        browse.setAction(Intent.ACTION_VIEW);
+        browse.setData(Uri.parse(getString(R.string.donate_url)));
+        startActivity(browse);
     }
 }

@@ -20,6 +20,18 @@
 
     <string name="welcome_title">Welcome to Crossbones</string>
 
+    <string name="page0_scroll">Swipe left or right to navigate</string>
+    <string name="page0_welcome_text">This ROM has been built from the ground up with the idea of maximum stability and performance for your device in mind.  Originally based off of Google\'s ICS AOSP code base, new features will be introduced in each build, providing you with a neverending supply of Android possibility!</string>
+
+    <string name="page1_changelog_title">CHANGELOG:</string>
+    <string name="page1_version">Current Version: 0.2.1</string>
+    <string name="page1_changelog">\* Introduce Welcome to Crossbones\n\* Quick Settings pulldown menu via Notification Bar</string>
+
+    <string name="page2_contact_title">Contacting Crossbones:</string>
+    <string name="page2_contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\nAlso see us on RootzWiki and XDA</string>
+
+    <string name="page3_finish_button_text">Finish</string>
+
     <string name="donate_title">Donate to Crossbones</string>
     <string name="donate_summary">Support Crossbones by donating through PayPal.\n\mDonations go towards the purchase of new devices, hardware, books, and anythine else related to the development of Crossbones Software.\n\nWe appreciate your support!</string>
     <string name="donate_url">https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EX9W3A7743TZS</string>

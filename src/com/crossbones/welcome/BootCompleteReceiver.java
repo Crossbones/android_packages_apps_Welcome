@@ -16,23 +16,30 @@
 
 package com.crossbones.welcome;
 
-//import android.app.Activity;
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-//import android.content.SharedPreferences;  
+import android.provider.Settings.System;
 
 
 public class BootCompleteReceiver extends BroadcastReceiver {
 
     private final String WELCOME_INTENT = "com.crossbones.welcome.Welcome";
+    private final String SETUP_WIZARD_HAS_RUN = "setup_wizard_has_run";
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Intent i = new Intent();
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        i.setClassName(context, WELCOME_INTENT);
-        context.startActivity(i);
+        ContentResolver cr = context.getContentResolver();
+
+        String setupWizard = System.getString(cr, SETUP_WIZARD_HAS_RUN);
+
+        if (setupWizard != null) {
+            Intent i = new Intent();
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            i.setClassName(context, WELCOME_INTENT);
+            context.startActivity(i);
+        }
 
     }
 }
