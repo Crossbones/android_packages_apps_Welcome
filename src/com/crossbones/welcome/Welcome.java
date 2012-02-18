@@ -18,7 +18,6 @@ package com.crossbones.welcome;
 
 import android.app.Activity;
 import android.content.Context;
-//import android.content.SharedPreferences;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -31,8 +30,6 @@ import android.widget.Button;
 
 public class Welcome extends Activity implements OnClickListener {
 
-   // private final String FIRST_BOOT = "first_boot";
-
     ViewPager mViewPager;
 
     private Button mDonateButton;
@@ -41,13 +38,6 @@ public class Welcome extends Activity implements OnClickListener {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
-        //SharedPreferences prefs = getPreferences(0);
-
-       // if (prefs.getBoolean(FIRST_BOOT, true)) {
-       //     SharedPreferences.Editor prefEditor = prefs.edit();
-       //     prefEditor.putBoolean(FIRST_BOOT, false);
-       //     prefEditor.commit();
 
         WelcomePagerAdapter adapter = new WelcomePagerAdapter();
 
@@ -58,13 +48,6 @@ public class Welcome extends Activity implements OnClickListener {
 
         setContentView(mViewPager);
 
-//            mDonateButton = (Button) findViewById(R.id.page3_donate_button);
-//            mDonateButton.setOnClickListener(this);
-//            mFinishButton = (Button) findViewById(R.id.page3_finish_button);
-//            mFinishButton.setOnClickListener(this);
-        //} else {
-        //    finish();
-        //}
     }
 
     @Override
