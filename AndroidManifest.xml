@@ -19,6 +19,7 @@
     coreApp="true" >
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application android:label="@string/app_name"
             android:theme="@android:style/Theme.Holo"

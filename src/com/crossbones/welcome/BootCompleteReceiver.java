@@ -34,8 +34,9 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 
         String firstBoot = System.getString(cr, SYSTEM_FIRST_BOOT);
 
-        if (firstBoot != "0") {
-            System.putString(cr, SYSTEM_FIRST_BOOT, "0");
+        if (firstBoot == null) {
+            System.putString(cr, SYSTEM_FIRST_BOOT, "1");
+
             Intent i = new Intent();
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.setClassName(context, WELCOME_INTENT);
