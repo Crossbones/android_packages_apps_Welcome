@@ -26,15 +26,16 @@ import android.provider.Settings.System;
 public class BootCompleteReceiver extends BroadcastReceiver {
 
     private final String WELCOME_INTENT = "com.crossbones.welcome.Welcome";
-    private final String SETUP_WIZARD_HAS_RUN = "setup_wizard_has_run";
+    private final String SYSTEM_FIRST_BOOT = "system_first_boot";
 
     @Override
     public void onReceive(Context context, Intent intent) {
         ContentResolver cr = context.getContentResolver();
 
-        String setupWizard = System.getString(cr, SETUP_WIZARD_HAS_RUN);
+        String firstBoot = System.getString(cr, SYSTEM_FIRST_BOOT);
 
-        if (setupWizard != null) {
+        if (firstBoot == null) {
+            System.putString(cr, SYSTEM_FIRST_BOOT, "0");
             Intent i = new Intent();
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.setClassName(context, WELCOME_INTENT);
