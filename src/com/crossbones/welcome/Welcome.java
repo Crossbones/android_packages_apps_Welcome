@@ -16,97 +16,70 @@
 
 package com.crossbones.welcome;
 
+
 import android.app.Activity;
-import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.view.LayoutInflater;
+import android.os.SystemProperties;
+import android.provider.Settings.System;
+import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.TextView;
 
 
-public class Welcome extends Activity implements OnClickListener {
+public class Welcome extends Activity {
 
-    ViewPager mViewPager;
+    private static final String SYSTEM_FIRST_BOOT = "system_first_boot";
+    private static final String ROM_VERSION = "ro.goo.version";
 
-    private Button mDonateButton;
-    private Button mFinishButton;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        WelcomePagerAdapter adapter = new WelcomePagerAdapter();
-
-        mViewPager = new ViewPager(this);
-        mViewPager.setId(R.id.welcome_pager);
-        mViewPager.setAdapter(adapter);
-        mViewPager.setCurrentItem(0);
-
-        setContentView(mViewPager);
+        setContentView(R.layout.welcome);
 
     }
 
     @Override
-    public void onClick(View v) {
-        if (v == mDonateButton) {
-            Donate donate = new Donate();
-            donate.launchDonate();
-        }
-        if (v == mFinishButton) {
-            return;
-        }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return false;
     }
 
-    private class WelcomePagerAdapter extends PagerAdapter {
-
-        public int getCount() {
-            return 4;
-        }
-
-        public Object instantiateItem(View collection, int position) {
-            LayoutInflater inflater = (LayoutInflater) collection.getContext()
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-            int resId = 0;
-            switch (position) {
-            case 0:
-                resId = R.layout.page0;
-                break;
-            case 1:
-                resId = R.layout.page1;
-                break;
-            case 2:
-                resId = R.layout.page2;
-                break;
-            case 3:
-                resId = R.layout.page3;
-                break;
-            }
-
-            View view = inflater.inflate(resId, null);
-
-            ((ViewPager) collection).addView(view, 0);
-
-            return view;
-        }
-
-        @Override
-        public void destroyItem(View arg0, int arg1, Object arg2) {
-            ((ViewPager) arg0).removeView((View) arg2);
-        }
-
-        @Override
-        public boolean isViewFromObject(View arg0, Object arg1) {
-            return arg0 == ((View) arg1);
-        }
-
-        @Override
-        public Parcelable saveState() {
-            return null;
-        }
+    public void page0(View view) {
+        setContentView(R.layout.welcome);
     }
+
+    public void page1(View view) {
+        setContentView(R.layout.welcome_changelog);
+
+        TextView changelogVersion = (TextView) findViewById(R.id.changelog_version);
+        String version =  SystemProperties.get(ROM_VERSION);
+        changelogVersion.append(" " + version);
+    }
+
+    public void page2(View view) {
+        setContentView(R.layout.welcome_contact);
+    }
+
+    public void page3(View view) {
+        setContentView(R.layout.welcome_donate);
+    }
+
+    public void finishWelcome(View view) {
+        ContentResolver cr = this.getContentResolver();
+        System.putString(cr, SYSTEM_FIRST_BOOT, "1");
+
+        finish();
+    }
+
+    public void launchDonate(View view) {
+        Intent browse = new Intent();
+        browse.setAction(Intent.ACTION_VIEW);
+        browse.setData(Uri.parse(getString(R.string.donate_url)));
+        startActivity(browse);
+    }
+
 }

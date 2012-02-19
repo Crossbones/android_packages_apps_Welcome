@@ -21,26 +21,32 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings.System;
+import android.util.Log;
 
 
 public class BootCompleteReceiver extends BroadcastReceiver {
 
-    private final String WELCOME_INTENT = "com.crossbones.welcome.Welcome";
-    private final String SYSTEM_FIRST_BOOT = "system_first_boot";
+    private static final String WELCOME_INTENT = "com.crossbones.welcome.Welcome";
+    private static final String SYSTEM_FIRST_BOOT = "system_first_boot";
+    private static final String TAG = "WelcomeBootReceiver";
 
     @Override
     public void onReceive(Context context, Intent intent) {
         ContentResolver cr = context.getContentResolver();
 
         String firstBoot = System.getString(cr, SYSTEM_FIRST_BOOT);
+        Log.d(TAG, "SYSTEM_FIRST_BOOT: " + firstBoot);
 
         if (firstBoot == null) {
-            System.putString(cr, SYSTEM_FIRST_BOOT, "1");
+        //if (firstBoot != null) {  //uncomment for TESTING
+            Log.d(TAG, "Running Welcome Intent");
 
             Intent i = new Intent();
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.setClassName(context, WELCOME_INTENT);
             context.startActivity(i);
+        } else {
+            Log.d(TAG, "Welcome Intent has already run");
         }
 
     }

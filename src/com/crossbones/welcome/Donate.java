@@ -21,12 +21,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
-public class Donate extends Activity implements OnClickListener {
 
-    private Button mDonateButton;
+public class Donate extends Activity {
+
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -34,18 +32,9 @@ public class Donate extends Activity implements OnClickListener {
 
         setContentView(R.layout.donate);
 
-        mDonateButton = (Button) findViewById(R.id.donate_button);
-        mDonateButton.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v == mDonateButton) {
-            launchDonate();
-        }
-    }
-
-    public void launchDonate() {
+    public void launchDonate(View view) {
         Intent browse = new Intent();
         browse.setAction(Intent.ACTION_VIEW);
         browse.setData(Uri.parse(getString(R.string.donate_url)));

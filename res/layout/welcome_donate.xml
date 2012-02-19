@@ -14,45 +14,57 @@
      limitations under the License.
 -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:fillViewport="true" >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" >
+
+    <LinearLayout
             android:layout_width="fill_parent" 
             android:layout_height="fill_parent" 
             android:orientation="vertical" 
             android:gravity="center_horizontal">
 
-        <TextView android:id="@+id/page0_welcome_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:textSize="20sp"
-                android:text="@string/welcome_title" />
-
         <ImageView
-                android:id="@+id/page0_crossbones_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="10sp"
+                android:padding="10dp"
                 android:src="@drawable/crossbones_logo"/>
 
-
-        <TextView android:id="@+id/page0_welcome_text"
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="@string/page0_welcome_text" />
+                android:text="@string/donate_summary" />
 
-        <TextView android:id="@+id/page0_scroll_text"
+        <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="bottom|center_horizontal"
-                android:text="@string/page0_scroll" />
-
+                android:text="@string/donate_button_text"
+                android:onClick="launchDonate" />
     </LinearLayout>
-</ScrollView>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="20sp" >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/back_button_text"
+                android:onClick="page2" />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/finish_button_text"
+                android:onClick="finishWelcome" />
+    </RelativeLayout>
+
+</RelativeLayout>
 

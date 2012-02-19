@@ -14,39 +14,56 @@
      limitations under the License.
 -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:fillViewport="true" >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" >
+
+    <LinearLayout
             android:layout_width="fill_parent" 
             android:layout_height="fill_parent" 
             android:orientation="vertical" 
             android:gravity="center_horizontal">
 
-        <TextView android:id="@+id/page1_changelog_title"
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="left"
                 android:paddingBottom="5sp"
                 android:textSize="20sp"
-                android:text="@string/page1_changelog_title" />
+                android:text="@string/changelog_title" />
 
-        <TextView android:id="@+id/page1_version"
+        <TextView android:id="@+id/changelog_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="left"
                 android:paddingBottom="5sp"
-                android:text="@string/page1_version" />
+                android:text="@string/changelog_version_text" />
 
-        <TextView android:id="@+id/page1_changelog_text"
-                android:layout_below="@id/crossbones_logo"
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="@string/page1_changelog" />
-
+                android:text="@string/changelog_summary" />
     </LinearLayout>
-</ScrollView>
 
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="20sp" >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/back_button_text"
+                android:onClick="page0" />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/next_button_text"
+                android:onClick="page2" />
+    </RelativeLayout>
+
+</RelativeLayout>

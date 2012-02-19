@@ -14,24 +14,49 @@
      limitations under the License.
 -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:fillViewport="true" >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/welcome_layout"
-            android:title="@string/welcome_title"
-            android:layout_width="fill_parent" 
-            android:layout_height="fill_parent" 
-            android:orientation="vertical" 
-            android:gravity="center_horizontal">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" >
 
-    <android.support.v4.view.ViewPager
-            android:id="@+id/welcome_pager"
-            android:layout_width="match_parent" 
-            android:layout_height="match_parent" />
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" >
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/welcome_title" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:src="@drawable/crossbones_logo"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/welcome_text" />
     </LinearLayout>
-</ScrollView>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="20sp" >
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/next_button_text"
+                android:onClick="page1" />
+    </RelativeLayout>
+
+</RelativeLayout>
 
