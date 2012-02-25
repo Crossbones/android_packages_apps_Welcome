@@ -31,7 +31,7 @@ public class Welcome extends Activity {
 
     public static final String PREFS_NAME = "Welcome";
     public static final String ROM_VERSION = "rom_version";
-    private static final String ROM_VERSION_PROP = "ro.goo.version";
+    private static final String ROM_VERSION_PROP = "ro.romversion";
 
 
     @Override
