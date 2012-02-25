@@ -17,36 +17,39 @@
 package com.crossbones.welcome;
 
 import android.content.BroadcastReceiver;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.provider.Settings.System;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 
 public class BootCompleteReceiver extends BroadcastReceiver {
 
     private static final String WELCOME_INTENT = "com.crossbones.welcome.Welcome";
-    private static final String SYSTEM_FIRST_BOOT = "system_first_boot";
     private static final String TAG = "WelcomeBootReceiver";
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        ContentResolver cr = context.getContentResolver();
+        Welcome welcome = new Welcome();
 
-        String firstBoot = System.getString(cr, SYSTEM_FIRST_BOOT);
-        Log.d(TAG, "SYSTEM_FIRST_BOOT: " + firstBoot);
+        SharedPreferences prefs = context.getSharedPreferences(welcome.PREFS_NAME, 0);
 
-        if (firstBoot == null) {
-        //if (firstBoot != null) {  //uncomment for TESTING
-            Log.d(TAG, "Running Welcome Intent");
+        String previousRomVersion = prefs.getString(welcome.ROM_VERSION, "0.0.0");
+        String currentRomVersion = welcome.getRomVersion();
+
+        Log.d(TAG, "Previous ROM Version: " + previousRomVersion);
+        Log.d(TAG, "Current ROM Version: " + currentRomVersion);
+
+        if (!currentRomVersion.equals(previousRomVersion)) {
+        //if (currentRomVersion.equals(previousRomVersion)) { //DEBUGGING
+            Log.d(TAG, "Running Welcome Activity");
 
             Intent i = new Intent();
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.setClassName(context, WELCOME_INTENT);
             context.startActivity(i);
         } else {
-            Log.d(TAG, "Welcome Intent has already run");
+            Log.d(TAG, "Welcome Activity has already run");
         }
 
     }

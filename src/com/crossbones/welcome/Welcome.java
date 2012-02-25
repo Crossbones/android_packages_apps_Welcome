@@ -16,14 +16,12 @@
 
 package com.crossbones.welcome;
 
-
 import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
-import android.provider.Settings.System;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -31,8 +29,9 @@ import android.widget.TextView;
 
 public class Welcome extends Activity {
 
-    private static final String SYSTEM_FIRST_BOOT = "system_first_boot";
-    private static final String ROM_VERSION = "ro.goo.version";
+    public static final String PREFS_NAME = "Welcome";
+    public static final String ROM_VERSION = "rom_version";
+    private static final String ROM_VERSION_PROP = "ro.goo.version";
 
 
     @Override
@@ -40,7 +39,6 @@ public class Welcome extends Activity {
         super.onCreate(icicle);
 
         setContentView(R.layout.welcome);
-
     }
 
     @Override
@@ -56,8 +54,10 @@ public class Welcome extends Activity {
         setContentView(R.layout.welcome_changelog);
 
         TextView changelogVersion = (TextView) findViewById(R.id.changelog_version);
-        String version =  SystemProperties.get(ROM_VERSION);
+        String version =  getRomVersion();
         changelogVersion.append(" " + version);
+
+        //TODO: Add changelog dyanically via file
     }
 
     public void page2(View view) {
@@ -69,8 +69,12 @@ public class Welcome extends Activity {
     }
 
     public void finishWelcome(View view) {
-        ContentResolver cr = this.getContentResolver();
-        System.putString(cr, SYSTEM_FIRST_BOOT, "1");
+        String romVersion = getRomVersion();
+
+        SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor prefEditor = prefs.edit();
+        prefEditor.putString(ROM_VERSION, romVersion);
+        prefEditor.commit();
 
         finish();
     }
@@ -82,4 +86,8 @@ public class Welcome extends Activity {
         startActivity(browse);
     }
 
+    public String getRomVersion() {
+        String version =  SystemProperties.get(ROM_VERSION_PROP);
+        return version;
+    }
 }
