@@ -23,7 +23,7 @@
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Introduce Welcome to Crossbones app\n- Added a Torch LED Flashlight. Longpress Search button or use app icon to activate\n- Added support for goo-inside.me Market App</string>
+    <string name="changelog_summary">\n- Introduce Welcome to Crossbones app. This app shows changes between ROM versions and other information about Crossbones. Expect this app to be expanded before official release of 0.3.0\n- Update kernel with more governor and scheduler selections\n- Added a Torch LED Flashlight. Longpress Search button or use app icon to activate\n- Included a basic File Manager\n- Added support for goo-inside.me OTA updates and included app\n- ROM Manager OTA updates are now fixed and working\n- New gapps are now the standard gapps package. Crossbones gapps are obsolete and are no longer maintained\n- Minor bugfixes and typo corrections</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
