@@ -23,7 +23,7 @@
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Update to Android 4.0.4_r1.1</string>
+    <string name="changelog_summary">\n- Update to Android 4.0.4_r1.1\n- Galaxy Nexus devices now have Crossbones Kernel 0.1.0 (based off of Codename Android/Savaged-Zen kernel)</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
