@@ -23,7 +23,7 @@
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- We now suport the Sprint Galaxy Nexus!\n- Update to Android 4.0.4_r1.2</string>
+    <string name="changelog_summary">\n- Quick Settings added to Notification Menu! More widgets to come in next releases.\n- Screen flash bug fixed.</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
