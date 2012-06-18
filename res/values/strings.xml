@@ -23,7 +23,7 @@
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Quick Settings added to Notification Menu! More widgets to come in next releases.\n- Screen flash bug fixed.</string>
+    <string name="changelog_summary">\n- Quick Settings added to Notification Menu! More widgets and customizability to come as time goes on.\n- Updated to android-4.0.4_r2.1.\n- Screen flash bug fixed.\n- Fixed issue with Torch not building on Galaxy Nexus.</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
