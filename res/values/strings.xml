@@ -19,11 +19,11 @@
     <string name="app_name">Welcome</string>
 
     <string name="welcome_title">Welcome to Crossbones</string>
-    <string name="welcome_text">This ROM has been built from the ground up with the idea of maximum stability and performance for your device in mind.  Originally based off of Google\'s ICS AOSP code base, new features will be introduced in each build, providing you with a neverending supply of Android possibility!</string>
+    <string name="welcome_text">This ROM has been built from the ground up with the idea of maximum stability and performance for your device in mind.  Originally based off of Google\'s Jellybean AOSP code base, new features will be introduced in each build, providing you with a neverending supply of Android possibility!</string>
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Quick Settings added to Notification Menu! More widgets and customizability to come as time goes on.\n- Updated to android-4.0.4_r2.1.\n- Screen flash bug fixed.\n- Fixed issue with Torch not building on Galaxy Nexus.</string>
+    <string name="changelog_summary">\n- Now based off Jellybean (android-4.1.1_r3)\n- Since this is the first JB release, all kernels are stock from Google and unmodified.  This will change by next release.</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
