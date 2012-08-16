@@ -25,7 +25,7 @@ import android.util.Log;
 
 public class BootCompleteReceiver extends BroadcastReceiver {
 
-    private static final String WELCOME_INTENT = "com.crossbones.welcome.Welcome";
+    private static final String WELCOME_INTENT = "com.crossbones.welcome.WelcomeActivity";
     private static final String TAG = "WelcomeBootReceiver";
 
     @Override

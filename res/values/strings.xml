@@ -18,12 +18,17 @@
 
     <string name="app_name">Welcome</string>
 
+    <string name="about_tab_title">About</string>
+    <string name="changelog_tab_title">Changelog</string>
+    <string name="contact_tab_title">Contact</string>
+    <string name="donate_tab_title">Donate</string>
+
     <string name="welcome_title">Welcome to Crossbones</string>
     <string name="welcome_text">This ROM has been built from the ground up with the idea of maximum stability and performance for your device in mind.  Originally based off of Google\'s ICS AOSP code base, new features will be introduced in each build, providing you with a neverending supply of Android possibility!</string>
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Quick Settings added to Notification Menu! More widgets and customizability to come as time goes on.\n- Updated to android-4.0.4_r2.1.\n- Screen flash bug fixed.\n- Fixed issue with Torch not building on Galaxy Nexus.</string>
+    <string name="changelog_summary">\n- Final ICS incarnation of Crossbones - hence 1.0\n- Updated the proprietary binaries for all supported devices.</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
@@ -36,5 +41,7 @@
     <string name="finish_button_text">Finish</string>
     <string name="back_button_text">Back</string>
     <string name="next_button_text">Next</string>
+
+    <string name="menu_exit">Exit</string>
 
 </resources>
