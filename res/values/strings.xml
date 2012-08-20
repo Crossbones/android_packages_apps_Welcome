@@ -28,7 +28,7 @@
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Final ICS incarnation of Crossbones - hence 1.0\n- Updated the proprietary binaries for all supported devices.</string>
+    <string name="changelog_summary">\n- Final ICS incarnation of Crossbones - hence 1.0\n- Updated the proprietary binaries for all supported devices\n- Reworked the Welcome app UI\n- Changed the Settings menu entries and organized them for a cleaner look.</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
