@@ -30,7 +30,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Welcome welcome = new Welcome();
+        WelcomeActivity welcome = new WelcomeActivity();
 
         SharedPreferences prefs = context.getSharedPreferences(welcome.PREFS_NAME, 0);
 
