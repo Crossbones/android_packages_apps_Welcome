@@ -25,17 +25,17 @@ import android.util.Log;
 
 public class BootCompleteReceiver extends BroadcastReceiver {
 
-    private static final String WELCOME_INTENT = "com.crossbones.welcome.WelcomeActivity";
+    private static final String WELCOME_INTENT = "com.crossbones.welcome.AboutActivity";
     private static final String TAG = "WelcomeBootReceiver";
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        WelcomeActivity welcome = new WelcomeActivity();
+        AboutActivity aboutActivity = new AboutActivity();
 
-        SharedPreferences prefs = context.getSharedPreferences(welcome.PREFS_NAME, 0);
+        SharedPreferences prefs = context.getSharedPreferences(aboutActivity.PREFS_NAME, 0);
 
-        String previousRomVersion = prefs.getString(welcome.ROM_VERSION, "0.0.0");
-        String currentRomVersion = welcome.getRomVersion();
+        String previousRomVersion = prefs.getString(aboutActivity.ROM_VERSION, "0.0.0");
+        String currentRomVersion = aboutActivity.getRomVersion();
 
         Log.d(TAG, "Previous ROM Version: " + previousRomVersion);
         Log.d(TAG, "Current ROM Version: " + currentRomVersion);

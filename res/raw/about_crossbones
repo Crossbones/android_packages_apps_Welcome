@@ -1,0 +1,15 @@
+Crossbones ROM is built from the ground up with the idea of maximum stability and performance for your device in mind.
+
+Originally based off of Google's AOSP code base, new features and bug fixes are introduced with each build.  This gives you a unique Android experience as we add to and change Google's code base, providing you with a never ending supply of Android possibility!
+
+
+Developers:
+mwielgosz
+snandlal
+
+Devices currently supported:
+GSM Galaxy Nexus (maguro)
+Verizon Galaxy Nexus (toro)
+Sprint Galaxy Nexus (toroplus)
+Nexus S (crespo)
+Nexus S 4G (crespo4g)

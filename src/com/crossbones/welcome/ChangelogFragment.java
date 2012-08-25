@@ -21,12 +21,48 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class ChangelogFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View changelogView = inflater.inflate(R.layout.changelog_fragment, container, false);
+
+        AboutActivity aboutActivity = new AboutActivity();
+
+        TextView changelogVersion = (TextView) changelogView.findViewById(R.id.changelog_version);
+        String version =  aboutActivity.getRomVersion();
+        changelogVersion.append(" " + version);
+
+        TextView changelogText = (TextView) changelogView.findViewById(R.id.changelog);
+        changelogText.setText(readChangelog());
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.changelog_fragment, container, false);
+        return changelogView;
     }
+
+    private String readChangelog() {
+        InputStream inputStream = getResources().openRawResource(R.raw.changelog);
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+        int i;
+        try {
+            i = inputStream.read();
+        while (i != -1) {
+           byteArrayOutputStream.write(i);
+           i = inputStream.read();
+        }
+            inputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return byteArrayOutputStream.toString();
+    }
+
 }

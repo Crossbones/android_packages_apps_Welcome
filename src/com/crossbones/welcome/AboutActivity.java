@@ -23,16 +23,25 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+//import java.io.ByteArrayOutputStream;
+//import java.io.IOException;
+//import java.io.InputStream;
 
 public class AboutActivity extends Activity {
     public static Context appContext;
+
+    public static final String PREFS_NAME = "Welcome";
+    public static final String ROM_VERSION = "rom_version";
+    private static final String ROM_VERSION_PROP = "ro.romversion";
 	
     /** Called when the activity is first created. */
     @Override
@@ -44,7 +53,6 @@ public class AboutActivity extends Activity {
        //ActionBar
         ActionBar actionbar = getActionBar();
         actionbar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionbar.setHomeButtonEnabled(true);
         
         ActionBar.Tab AboutTab = actionbar.newTab().setText(R.string.about_tab_title);
         ActionBar.Tab ChangelogTab = actionbar.newTab().setText(R.string.changelog_tab_title);
@@ -68,10 +76,53 @@ public class AboutActivity extends Activity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.menuitem_exit:
+                String romVersion = getRomVersion();
+
+                SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences.Editor prefEditor = prefs.edit();
+                prefEditor.putString(ROM_VERSION, romVersion);
+                prefEditor.commit();
+
+                finish();
+                return true;
+        }
+        return false;
+    }
+
+    @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("tab", getActionBar().getSelectedNavigationIndex());
     }
+
+/*    public String readFile(int resId) {
+        InputStream inputStream = getResources().openRawResource(resId);
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+        int i;
+        try {
+            i = inputStream.read();
+        while (i != -1) {
+           byteArrayOutputStream.write(i);
+           i = inputStream.read();
+        }
+            inputStream.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return byteArrayOutputStream.toString();
+    }*/
 
     public void launchDonate(View view) {
         Intent intent = new Intent();
@@ -80,28 +131,33 @@ public class AboutActivity extends Activity {
         startActivity(intent);
     }
 
+    public String getRomVersion() {
+        String version = SystemProperties.get(ROM_VERSION_PROP);
+        return version;
+    }
+
 }
 
 class MyTabsListener implements ActionBar.TabListener {
-	public Fragment fragment;
-	
-	public MyTabsListener(Fragment fragment) {
-		this.fragment = fragment;
-	}
-	
-	@Override
-	public void onTabReselected(Tab tab, FragmentTransaction ft) {
-		// nothing
-	}
+    public Fragment fragment;
 
-	@Override
-	public void onTabSelected(Tab tab, FragmentTransaction ft) {
-		ft.replace(R.id.fragment_container, fragment);
-	}
+    public MyTabsListener(Fragment fragment) {
+        this.fragment = fragment;
+    }
 
-	@Override
-	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		ft.remove(fragment);
-	}
-	
+    @Override
+    public void onTabReselected(Tab tab, FragmentTransaction ft) {
+        // nothing
+    }
+
+    @Override
+    public void onTabSelected(Tab tab, FragmentTransaction ft) {
+        ft.replace(R.id.fragment_container, fragment);
+    }
+
+    @Override
+    public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+        ft.remove(fragment);
+    }
+
 }
