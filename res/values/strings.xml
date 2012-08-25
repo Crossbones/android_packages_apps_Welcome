@@ -16,14 +16,17 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="app_name">Welcome</string>
+    <string name="app_name">About Crossbones</string>
 
-    <string name="welcome_title">Welcome to Crossbones</string>
-    <string name="welcome_text">This ROM has been built from the ground up with the idea of maximum stability and performance for your device in mind.  Originally based off of Google\'s Jellybean AOSP code base, new features will be introduced in each build, providing you with a neverending supply of Android possibility!</string>
+    <string name="about_tab_title">About</string>
+    <string name="changelog_tab_title">Changelog</string>
+    <string name="contact_tab_title">Contact</string>
+    <string name="donate_tab_title">Donate</string>
+
+    <string name="about_title">Welcome to Crossbones</string>
 
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
-    <string name="changelog_summary">\n- Now based off Jellybean (android-4.1.1_r3)\n- Since this is the first JB release, all kernels are stock from Google and unmodified.  This will change by next release.</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
     <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
@@ -36,5 +39,7 @@
     <string name="finish_button_text">Finish</string>
     <string name="back_button_text">Back</string>
     <string name="next_button_text">Next</string>
+
+    <string name="menu_exit">Exit</string>
 
 </resources>

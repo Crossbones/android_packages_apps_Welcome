@@ -1,0 +1,33 @@
+1.0.0:
+- First official stable build of ROM
+- Updated the proprietary binaries for all supported devices
+- Reworked the Welcome app completely - new UI, CHANGELOG now reads from RAW file, shows changes from earlier versions, fully accessable through Settings > About Phone > About Crossbones
+- Changed the Settings menu entries and organized them for a cleaner look
+
+0.4.1:
+- GSM Galaxy Nexus is now supported!
+- Quick Settings added to Notification Menu! More widgets and customizability to come as time goes on
+- Updated to android-4.0.4_r2.1
+- Screen flash bug fixed
+- Fixed issue with Torch not building on Galaxy Nexus
+
+0.3.2:
+- Sprint Galaxy Nexus is now supported!
+- Update to Android 4.0.4_r1.2
+
+0.3.1:
+- Fix issue when flashing on latest version of TWRP
+- Update to Android 4.0.4_r1.1
+- Galaxy Nexus devices now have Crossbones Kernel 0.1.0 (based off of Codename Android/Savaged-Zen kernel)
+
+0.3.0:
+- Introduce Welcome to Crossbones app. This app shows changes between ROM versions and other information about Crossbones.
+- Update kernel with more governor and scheduler selections
+- Added a Torch LED Flashlight. Longpress Search button or use app icon to activate
+- Included a basic File Manager
+- Added support for goo-inside.me OTA updates and included app
+- ROM Manager OTA updates are now fixed and working
+- New gapps are now the standard gapps package. Crossbones gapps are obsolete and are no longer maintained
+- Minor bugfixes and typo corrections
+
+

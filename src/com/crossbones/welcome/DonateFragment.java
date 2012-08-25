@@ -16,28 +16,17 @@
 
 package com.crossbones.welcome;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
-
-public class Donate extends Activity {
-
-
+public class DonateFragment extends Fragment {
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-
-        setContentView(R.layout.donate);
-
-    }
-
-    public void launchDonate(View view) {
-        Intent browse = new Intent();
-        browse.setAction(Intent.ACTION_VIEW);
-        browse.setData(Uri.parse(getString(R.string.donate_url)));
-        startActivity(browse);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.donate_fragment, container, false);
     }
 }

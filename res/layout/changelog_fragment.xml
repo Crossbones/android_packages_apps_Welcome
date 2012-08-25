@@ -14,6 +14,9 @@
      limitations under the License.
 -->
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent" 
@@ -30,35 +33,20 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="5sp"
                 android:textSize="20sp"
-                android:text="@string/contact_title" />
+                android:text="@string/changelog_title" />
 
-        <TextView
+        <TextView android:id="@+id/changelog_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/contact_text" />
-        </LinearLayout>
+                android:paddingBottom="5sp"
+                android:text="@string/changelog_version_text" />
 
-    <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:padding="20sp" >
-
-        <Button
+        <TextView android:id="@+id/changelog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="@string/back_button_text"
-                android:onClick="page1" />
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="@string/next_button_text"
-                android:onClick="page3" />
-    </RelativeLayout>
+                android:gravity="left" />
+    </LinearLayout>
 
 </RelativeLayout>
 
+</ScrollView>

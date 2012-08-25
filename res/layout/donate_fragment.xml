@@ -14,6 +14,9 @@
      limitations under the License.
 -->
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent" 
@@ -25,45 +28,26 @@
             android:orientation="vertical" 
             android:gravity="center_horizontal">
 
-        <TextView
+        <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="5sp"
-                android:textSize="20sp"
-                android:text="@string/changelog_title" />
-
-        <TextView android:id="@+id/changelog_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="5sp"
-                android:text="@string/changelog_version_text" />
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:src="@drawable/crossbones_logo"/>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="left"
-                android:text="@string/changelog_summary" />
+                android:gravity="center_horizontal"
+                android:text="@string/donate_summary" />
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/donate_button_text"
+                android:onClick="launchDonate" />
     </LinearLayout>
 
-    <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:padding="20sp" >
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="@string/back_button_text"
-                android:onClick="page0" />
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="@string/next_button_text"
-                android:onClick="page2" />
-    </RelativeLayout>
-
 </RelativeLayout>
+
+</ScrollView>
