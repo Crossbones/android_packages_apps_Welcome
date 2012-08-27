@@ -3,6 +3,7 @@
 - Updated the proprietary binaries for all supported devices
 - Reworked the Welcome app completely - new UI, CHANGELOG now reads from RAW file, shows changes from earlier versions, fully accessable through Settings > About Phone > About Crossbones
 - Changed the Settings menu entries and organized them for a cleaner look
+- Fixed display issue with the Quick Settings window
 
 0.4.1:
 - GSM Galaxy Nexus is now supported!
