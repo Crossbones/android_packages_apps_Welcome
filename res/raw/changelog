@@ -1,6 +1,11 @@
+2.1.1:
+- Update to android-4.1.2_r1
+- All devices now include the ZenSeries kernel!
+- Tethering issues for crespo/crespo4g fixed
+- Toroplus device files and binaries are now partially supported by Google
+
 2.0.0: (Jellybean)
 - First release of Jellybean!
-- crespo/crespo4g has custom Crossbones kernel
 - All bugs in extended power menu fixed
 - QuickSettings: completely recoded back end and UI for Jellybean
 
