@@ -1,6 +1,7 @@
 2.1.2:
 - crespo/crespo4g: update kernel to ZenSeries v3
 - crespo4g: fixed MMS & tethering issues
+- Fixed device name being reported wrong during flashing of ROM
 
 2.1.1:
 - Update to android-4.1.2_r1
