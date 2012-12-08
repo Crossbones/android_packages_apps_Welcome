@@ -1,19 +1,20 @@
 2.1.2:
-- crespo/crespo4g: update kernel to ZenSeries v3
-- crespo4g: fixed MMS & tethering issues
-- Fixed device name being reported wrong during flashing of ROM
-
-2.1.1:
 - Update to android-4.1.2_r1
-- All devices now include the ZenSeries kernel!
-- Tethering issues for crespo/crespo4g fixed
-- Toroplus device files and binaries are now partially supported by Google
+- All devices now include the ZenSERIES kernel!
+    -tuna: ZenSERIES v12
+    -crespo: ZenSERIES v3
+- Busybox added
+- sysctl binary added
+- su binary updated
+- SuperSU updated to v0.99
+- crespo4g: fixed MMS & tethering issues
 
 2.0.0: (Jellybean)
 - First release of Jellybean!
 - All bugs in extended power menu fixed
 - QuickSettings: completely recoded back end and UI for Jellybean
 
+----------
 
 1.0.0: (Ice Cream Sandwich)
 - First official stable build of ROM
@@ -47,5 +48,4 @@
 - ROM Manager OTA updates are now fixed and working
 - New gapps are now the standard gapps package. Crossbones gapps are obsolete and are no longer maintained
 - Minor bugfixes and typo corrections
-
 
