@@ -1,7 +1,7 @@
 2.1.2:
 - Update to android-4.1.2_r1
 - All devices now include the ZenSERIES kernel!
-    -tuna: ZenSERIES v14
+    -tuna: ZenSERIES v14.1
     -crespo: ZenSERIES v3
 - Busybox added
 - sysctl binary added
