@@ -1,9 +1,10 @@
 2.1.2:
 - Update to android-4.1.2_r1
 - All devices now include the ZenSERIES kernel!
-    -tuna: ZenSERIES v14.1
+    -tuna: ZenSERIES v15
     -crespo: ZenSERIES v3
 - Busybox added
+- init.d script support added
 - sysctl binary added
 - su binary updated
 - SuperSU updated to v0.99
@@ -13,6 +14,7 @@
 - Settings: added GPU clock control if supported by device
 - Settings: added High Performance Sound control if supported by device
 - Settings: optimized CPU Settings & BLN control
+- Fixed message while flashing zip file
 
 2.0.0: (Jellybean)
 - First release of Jellybean!
