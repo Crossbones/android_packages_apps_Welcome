@@ -1,3 +1,10 @@
+2.2.0:
+- Update to android-4.2.1_r1
+- Asus Google Nexus 7 supported!
+- Crossbones QuickSettings has been removed because we will be expanding upon the built-in QuickSettings which AOSP offers
+- Extended Power Menu has been updated and revamped for 4.2
+- Enable rotation of Launcher2
+
 2.1.2:
 - Update to android-4.1.2_r1
 - All devices now include the ZenSERIES kernel!
