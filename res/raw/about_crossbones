@@ -1,11 +1,15 @@
+Android 4.2
+
 Crossbones ROM is built from the ground up with the idea of maximum stability and performance for your device in mind.
 
-Originally based off of Google's AOSP code base, new features and bug fixes are introduced with each build.  This gives you a unique Android experience as we change and add to Google's code base, providing you with a never ending supply of Android possibility!
+Originally based off of Google's AOSP code base, new features and bug fixes are introduced with each build.  See the CHANGELOG for more information.
 
 ----------
 
 Developed by mwielgosz 
 (mike@xbones.org)
+
+ZenSERIES kernel developed by bbedward
 
 ----------
 
@@ -13,5 +17,4 @@ Devices currently supported:
 GSM Galaxy Nexus (maguro)
 Verizon Galaxy Nexus (toro)
 Sprint Galaxy Nexus (toroplus)
-Nexus S (crespo)
-Nexus S 4G (crespo4g)
+ASUS Google Nexus 7 (grouper)
