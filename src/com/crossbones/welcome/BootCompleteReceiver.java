@@ -35,7 +35,7 @@ public class BootCompleteReceiver extends BroadcastReceiver {
         SharedPreferences prefs = context.getSharedPreferences(aboutActivity.PREFS_NAME, 0);
 
         String previousRomVersion = prefs.getString(aboutActivity.ROM_VERSION, "0.0.0");
-        String currentRomVersion = aboutActivity.getRomVersion();
+        String currentRomVersion = Utils.getRomVersion();
 
         Log.d(TAG, "Previous ROM Version: " + previousRomVersion);
         Log.d(TAG, "Current ROM Version: " + currentRomVersion);

@@ -4,6 +4,8 @@ Crossbones ROM is built from the ground up with the idea of maximum stability an
 
 Originally based off of Google's AOSP code base, new features and bug fixes are introduced with each build.  See the CHANGELOG for more information.
 
+View the source code at: http://github.com/Crossbones
+
 ----------
 
 Developed by mwielgosz 

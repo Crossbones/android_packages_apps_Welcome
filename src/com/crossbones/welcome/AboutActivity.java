@@ -26,22 +26,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-//import java.io.ByteArrayOutputStream;
-//import java.io.IOException;
-//import java.io.InputStream;
 
 public class AboutActivity extends Activity {
     public static Context appContext;
 
     public static final String PREFS_NAME = "Welcome";
     public static final String ROM_VERSION = "rom_version";
-    private static final String ROM_VERSION_PROP = "ro.romversion";
 	
     /** Called when the activity is first created. */
     @Override
@@ -50,26 +45,30 @@ public class AboutActivity extends Activity {
         setContentView(R.layout.main);
         appContext = getApplicationContext();
 
-       //ActionBar
+        //ActionBar
         ActionBar actionbar = getActionBar();
         actionbar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         ActionBar.Tab AboutTab = actionbar.newTab().setText(R.string.about_tab_title);
+        ActionBar.Tab FeaturesTab = actionbar.newTab().setText(R.string.features_tab_title);
         ActionBar.Tab ChangelogTab = actionbar.newTab().setText(R.string.changelog_tab_title);
         ActionBar.Tab ContactTab = actionbar.newTab().setText(R.string.contact_tab_title);
         ActionBar.Tab DonateTab = actionbar.newTab().setText(R.string.donate_tab_title);
         
         Fragment AboutFragment = new AboutFragment();
+        Fragment FeaturesFragment = new FeaturesFragment();
         Fragment ChangelogFragment = new ChangelogFragment();
         Fragment ContactFragment = new ContactFragment();
         Fragment DonateFragment = new DonateFragment();
 
         AboutTab.setTabListener(new MyTabsListener(AboutFragment));
+        FeaturesTab.setTabListener(new MyTabsListener(FeaturesFragment));
         ChangelogTab.setTabListener(new MyTabsListener(ChangelogFragment));
         ContactTab.setTabListener(new MyTabsListener(ContactFragment));
         DonateTab.setTabListener(new MyTabsListener(DonateFragment));
 
         actionbar.addTab(AboutTab);
+        actionbar.addTab(FeaturesTab);
         actionbar.addTab(ChangelogTab);
         actionbar.addTab(ContactTab);
         actionbar.addTab(DonateTab);
@@ -86,7 +85,7 @@ public class AboutActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()) {
             case R.id.menuitem_exit:
-                String romVersion = getRomVersion();
+                String romVersion = Utils.getRomVersion();
 
                 SharedPreferences prefs = this.getSharedPreferences(PREFS_NAME, 0);
                 SharedPreferences.Editor prefEditor = prefs.edit();
@@ -105,37 +104,12 @@ public class AboutActivity extends Activity {
         outState.putInt("tab", getActionBar().getSelectedNavigationIndex());
     }
 
-/*    public String readFile(int resId) {
-        InputStream inputStream = getResources().openRawResource(resId);
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
-        int i;
-        try {
-            i = inputStream.read();
-        while (i != -1) {
-           byteArrayOutputStream.write(i);
-           i = inputStream.read();
-        }
-            inputStream.close();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return byteArrayOutputStream.toString();
-    }*/
-
     public void launchDonate(View view) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(getString(R.string.donate_url)));
         startActivity(intent);
     }
-
-    public String getRomVersion() {
-        String version = SystemProperties.get(ROM_VERSION_PROP);
-        return version;
-    }
-
 }
 
 class MyTabsListener implements ActionBar.TabListener {

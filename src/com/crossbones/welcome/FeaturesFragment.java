@@ -24,21 +24,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-public class ChangelogFragment extends Fragment {
+public class FeaturesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View changelogView = inflater.inflate(R.layout.changelog_fragment, container, false);
+        View featuresView = inflater.inflate(R.layout.features_fragment, container, false);
 
-        TextView changelogVersion = (TextView) changelogView.findViewById(R.id.changelog_version);
-        String version =  Utils.getRomVersion();
-        changelogVersion.append(" " + version);
-
-        TextView changelogText = (TextView) changelogView.findViewById(R.id.changelog);
-        changelogText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.changelog));
+        TextView featuresText = (TextView) featuresView.findViewById(R.id.features);
+        featuresText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.features));
 
         // Inflate the layout for this fragment
-        return changelogView;
+        return featuresView;
     }
 }

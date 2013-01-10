@@ -1,12 +1,16 @@
 2.2.0:
-- Update to android-4.2.1_r1
+- Completely rebase Crossbones ROM for android-4.2.1_r1
 - Asus Google Nexus 7 supported!
 - Tuna kernel updated to ZenSERIES v16
+- OTG USB support
 - Crossbones QuickSettings has been removed because we will be expanding upon the new AOSP QuickSettings
 - Extended Power Menu has been updated and revamped for 4.2
 - Enable rotation of Launcher2 (stock launcher)
 - Fixed dictionaries
-- Many random bugfixes for Android 4.2
+- Build busybox from source code
+- Fix init.d script support by utilizing sysinit binary (now included)
+- MANY bugfixes for Android 4.2
+- Removed support for ROM Manager - updates supported through GooManager only
 
 2.1.2:
 - Update to android-4.1.2_r1

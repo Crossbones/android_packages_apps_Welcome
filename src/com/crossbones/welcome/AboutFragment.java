@@ -23,9 +23,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 public class AboutFragment extends Fragment {
     @Override
@@ -34,32 +31,10 @@ public class AboutFragment extends Fragment {
 
         View aboutView = inflater.inflate(R.layout.about_fragment, container, false);
 
-        AboutActivity aboutActivity = new AboutActivity();
-
         TextView aboutText = (TextView) aboutView.findViewById(R.id.about);
-        aboutText.setText(readAbout());
+        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_crossbones));
 
         // Inflate the layout for this fragment
         return aboutView;
     }
-
-
-    private String readAbout() {
-        InputStream inputStream = getResources().openRawResource(R.raw.about_crossbones);
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
-        int i;
-        try {
-            i = inputStream.read();
-        while (i != -1) {
-           byteArrayOutputStream.write(i);
-           i = inputStream.read();
-        }
-            inputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return byteArrayOutputStream.toString();
-    }
-
 }

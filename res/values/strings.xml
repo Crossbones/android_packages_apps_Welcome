@@ -19,17 +19,20 @@
     <string name="app_name">About Crossbones</string>
 
     <string name="about_tab_title">About</string>
+    <string name="features_tab_title">Features</string>
     <string name="changelog_tab_title">Changelog</string>
     <string name="contact_tab_title">Contact</string>
     <string name="donate_tab_title">Donate</string>
 
     <string name="about_title">Welcome to Crossbones</string>
 
+    <string name="features_title">Crossbones Features</string>
+
     <string name="changelog_title">CHANGELOG:</string>
     <string name="changelog_version_text">Current Version:</string>
 
     <string name="contact_title">Contacting Crossbones:</string>
-    <string name="contact_text">http://xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
+    <string name="contact_text">http://xbones.org\nsupport@xbones.org\nTwitter: @Xbones_dev\nIRC: #crossbones on FreeNode\n\nWe are also on RootzWiki and XDA forums</string>
 
     <string name="donate_title">Donate to Crossbones</string>
     <string name="donate_summary">Support Crossbones by donating through PayPal.\n\mDonations go towards the purchase of new devices, hardware, books, and anythine else related to the development of Crossbones Software.\n\nWe appreciate your support!</string>

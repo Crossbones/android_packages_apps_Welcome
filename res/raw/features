@@ -1,0 +1,16 @@
+Crossbones ROM includes many features and modifications which extend the capabilities of Android.  With each update to Android, Crossbones features may change or be altered to work with the latest version.
+
+Feature list:
+- Rooted ROM using SuperSU for su binary control
+- ZenSERIES kernel included for maximum performance & battery life
+- Extra options added to Settings for kernel tuning (CPU control, sound options, GPU options, etc.)
+- Basic File Manager app included
+- Flashlight included for devices that have a camera flash (Torch app)
+- Goo.im integration (GooManager app): get automatic notifications for ROM & GAPPS updates
+- Busybox included
+- init.d script support
+- Extended power menu (reboot options, screenshot, etc.)
+- OTG USB support: connect USB devices to microUSB port using OTG cable
+- Modified dictionaries
+- Option to have MMS app split text messages by encoding
+
