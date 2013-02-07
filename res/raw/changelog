@@ -1,9 +1,8 @@
 2.2.2:
-- Add SoundRecorder to build
-- Updated SuperSU and su binary to 1.0
+- Update to android-4.2.1_r1.2
+- Updated SuperSU and su binary to 1.04
 - Changed default ringtone/notification/alarm sounds
 - Allow ROM to be built with Java 7
-- grouper: add CameraLauncher
 
 2.2.1:
 - Tuna kernel updated to ZenSERIES v17
