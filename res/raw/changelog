@@ -1,6 +1,10 @@
 2.3.0:
 - Update to android-4.2.2_r1
-- Updated SuperSU and su binary to v1.05
+- Updated SuperSU and su binary to v1.10
+- tuna: switched to Trinity kernel for Android 4.2.2 (alpha-1)
+- tuna: GPU binaries updated for android-4.2.2
+- Fixed crash in Settings if device supports GPU clock frequency change but kernel does not
+- More bugfixes under the hood
 
 2.2.2:
 - Update to android-4.2.1_r1.2
