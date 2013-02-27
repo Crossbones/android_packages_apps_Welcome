@@ -16,7 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="app_name">About Crossbones</string>
+    <string name="app_name">About the Crossbones ROM</string>
 
     <string name="about_tab_title">About</string>
     <string name="features_tab_title">Features</string>
