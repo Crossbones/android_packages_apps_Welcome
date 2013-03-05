@@ -1,9 +1,11 @@
 2.3.1:
+- New Boot Animation thanks to Sham-rock (XDA)
 - All device and hardware source code repositories are now official android-4.2.2_r1 (previously unreleased)
 - All device proprietary binaries have been updated for 4.2.2
 - Updated SuperSU and su binary to v1.25
 - Added ntfs (read-only) support to USB Host mode
 - Allow user to read, write, and auto-mount non-primary storage devices
+- Better grammer (string changes) in multiple apps thanks to MBQsniper
 
 2.3.0:
 - Update to android-4.2.2_r1
