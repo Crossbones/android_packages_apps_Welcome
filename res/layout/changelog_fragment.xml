@@ -18,35 +18,35 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent" >
 
-    <LinearLayout
+        <LinearLayout
             android:layout_width="fill_parent" 
             android:layout_height="fill_parent" 
             android:orientation="vertical" 
             android:gravity="center_horizontal">
 
-        <TextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5sp"
                 android:textSize="20sp"
                 android:text="@string/changelog_title" />
 
-        <TextView android:id="@+id/changelog_version"
+            <TextView android:id="@+id/changelog_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5sp"
                 android:text="@string/changelog_version_text" />
 
-        <TextView android:id="@+id/changelog"
+            <TextView android:id="@+id/changelog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left" />
-    </LinearLayout>
+        </LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>
