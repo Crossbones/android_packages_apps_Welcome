@@ -1,4 +1,5 @@
 2.3.2:
+- Update to android-4.2.2_r1.2
 - New clock options are available in Settings for the status bar
 - New Torch app and Settings tile
 - tuna: switched to Lean Kernel 6.5 stable
