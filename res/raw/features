@@ -2,6 +2,7 @@ Crossbones ROM includes many features and modifications which extend the capabil
 
 Feature list:
 - Rooted ROM using SuperSU for su binary control
+- All devices packaged with LeanKernel
 - Extra options added to Settings for kernel tuning (CPU control, sound options, GPU options, etc.)
 - Basic File Manager app included
 - Flashlight included for devices that have a camera flash (Torch app)

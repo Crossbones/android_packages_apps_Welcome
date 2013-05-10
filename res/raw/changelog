@@ -2,7 +2,8 @@
 - Update to android-4.2.2_r1.1
 - New clock options are available in Settings for the status bar
 - New Torch app and Settings tile
-- tuna: switched to Lean Kernel 6.5 stable
+- grouper: kernel changed to LeanKernel 1.6.1 stable
+- tuna: kernel changed to LeanKernel 6.5 stable
 - toroplus: reverted many binaries to 4.2.1 OTA due to instability
 - Smoother gradient background
 - Under-the-hood bugfixes
