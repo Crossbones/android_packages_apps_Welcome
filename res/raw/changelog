@@ -1,3 +1,10 @@
+2.3.3:
+- Update to android-4.2.2_r1.2
+- Update SuperSU and su binary to v1.30
+- Add Pure Audio Engine (testing - pending removal)
+- toro: fix tethering force close
+- Optimizations and bug fixes
+
 2.3.2:
 - Update to android-4.2.2_r1.1
 - New clock options are available in Settings for the status bar
