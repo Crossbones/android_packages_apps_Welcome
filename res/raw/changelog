@@ -1,7 +1,7 @@
 2.3.3:
 - Update to android-4.2.2_r1.2
-- Update SuperSU and su binary to v1.30
-- Add Pure Audio Engine (testing - pending removal)
+- Update SuperSU and su binary to v1.34
+- Add T-Mobile Theme Engine
 - toro: fix tethering force close
 - Optimizations and bug fixes
 
