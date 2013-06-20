@@ -4,6 +4,7 @@ Feature list:
 - Rooted ROM using SuperSU for su binary control
 - All devices packaged with LeanKernel
 - Extra options added to Settings for kernel tuning (CPU control, sound options, GPU options, etc.)
+- T-Mobile Theme Engine support
 - Basic File Manager app included
 - Flashlight included for devices that have a camera flash (Torch app)
 - Goo.im integration (GooManager app): get automatic notifications for ROM & GAPPS updates
