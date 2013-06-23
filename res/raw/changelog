@@ -2,6 +2,7 @@
 - Update to android-4.2.2_r1.2
 - Update SuperSU and su binary to v1.34
 - Add T-Mobile Theme Engine
+- Add clear all button in recent apps
 - toro: fix tethering force close
 - Optimizations and bug fixes
 
