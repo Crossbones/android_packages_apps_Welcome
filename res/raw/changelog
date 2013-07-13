@@ -1,11 +1,13 @@
 2.3.3:
 - Update to android-4.2.2_r1.2
-- Update SuperSU and su binary to v1.34
+- Update SuperSU and su binary to v1.41
 - Add T-Mobile Theme Engine
 - Add ability to enable/disable CPU Options in Settings
-- Add clear all button in recent apps
+- Add "Clear All" button in recent apps
 - All devices now have STOCK KERNEL
+- tuna: dalvik fix to decrease lag
 - toro: fix tethering force close
+- Fix for Android bug 9695860 which patches a security vulnerability in malicious APKs
 - Optimizations and bug fixes
 
 2.3.2:

@@ -2,7 +2,7 @@ Crossbones ROM includes many features and modifications which extend the capabil
 
 Feature list:
 - Rooted ROM using SuperSU for su binary control
-- Extra options added to Settings for kernel tuning (CPU control, sound options, GPU options, etc.)
+- Native CPU governor, frequency, and I/O control (can be disabled)
 - T-Mobile Theme Engine support
 - Basic File Manager app included
 - Flashlight included for devices that have a camera flash (Torch app)
@@ -10,7 +10,9 @@ Feature list:
 - Busybox included
 - init.d script support
 - Extended power menu (reboot options, screenshot, etc.)
+- Clear All button in Recent Apps
 - OTG USB support: connect USB devices to microUSB port using OTG cable
 - Modified dictionaries
+- Device & kernel specific options in Settings (High Performance Sound, BLN, GPU overclock, etc)
 - Option to have MMS app split text messages by encoding
 - Status bar clock options
