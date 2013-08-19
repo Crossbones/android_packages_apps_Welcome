@@ -3,7 +3,6 @@ Crossbones ROM includes many features and modifications which extend the capabil
 Feature list:
 - Rooted ROM using SuperSU for su binary control
 - Native CPU governor, frequency, and I/O control (can be disabled)
-- T-Mobile Theme Engine support
 - Basic File Manager app included
 - Flashlight included for devices that have a camera flash (Torch app)
 - Goo.im integration (GooManager app): get automatic notifications for ROM & GAPPS updates

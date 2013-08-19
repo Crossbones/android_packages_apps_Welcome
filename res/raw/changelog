@@ -1,3 +1,8 @@
+2.4.0:
+- Update to android-4.3_r2.1
+- Remove T-Mobile Theme Engine
+- Update SuperSU and su binary to v1.51
+
 2.3.3:
 - Update to android-4.2.2_r1.2
 - Update SuperSU and su binary to v1.41
